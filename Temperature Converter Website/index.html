@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title> Temperature</title>
+        <style>
+            body{
+                background-image: url("new.avif");
+                text-align: center;
+            }
+            .new3{
+                background-color: #401d44a6;
+                height: 300px;
+                width: 500px;
+                margin: 100px 300px;
+             }
+            .new{
+                padding-left: 20px;
+                float: left;
+            }
+            .new1{
+                padding-right: 20px;
+                float: right;
+            }
+            input{
+                height: 30px;
+            }
+            select{
+                height: 30px;
+                 width: 150px;
+            }
+            button{
+                height: 30px;
+                width: 100px;
+                border-radius: 20%;
+                background-color: #1f472e;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="new3">
+            <h1 style="color:#97c5a9; padding-top: 20px;"> TEMPERATURE CONVERTER</h1>
+            <div class="new">
+                <label style="font-size: 2rem;"> Degrees : </label><br>
+                <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(value)" >
+            </div>
+    
+            <div class="new1">
+                <labe style="font-size: 2rem;"> Type : </label><br>
+                <select>
+                    <option> Fahrenheit</option>
+                </select>
+            </div>
+
+            <div class="new4">
+                <button style= "margin-top: 80px;"  onclick="temperatureConverter(value)"> Convert </button>
+            </div>
+            
+            <div style="margin-top: 10px;"    class="new5">
+                <label style="font-size: 2rem;"> Result : </label><br>
+               <div style="background-color: white ; height: 40px; width: 50%; margin-left: 90px;"><span id="outputCelcius"></span></div>
+            </div>
+        </div>
+
+
+        <script>
+            function temperatureConverter(valNum) {
+              valNum = parseFloat(valNum);
+              document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+            }
+
+            </script>
+        
+        
+    </body>
+</html>
